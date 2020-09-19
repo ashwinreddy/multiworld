@@ -13,6 +13,12 @@ def register_custom_envs():
     _REGISTERED = True
 
     LOGGER.info("Registering multiworld pygame gym environments")
+       
+    register(
+        id='Point2DFixed-v0',
+        entry_point='multiworld.envs.pygame.point2d:Point2DEnv'
+    )
+    
     register(
         id='Point2DLargeEnv-offscreen-v0',
         entry_point='multiworld.envs.pygame.point2d:Point2DEnv',
